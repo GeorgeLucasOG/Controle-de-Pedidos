@@ -97,7 +97,7 @@ if (!isset($_SESSION["nome"]) && !isset($_SESSION["cargo"])) {
                                   
                                   echo "<td><input type='radio' name='box' onclick=radio(".$value['id'].",'".$newname."','".$value['email']."',".$value['cargo'].") id='".$value['id']."'></td>";
 
-                                  echo "<td>$key</td>";
+                                  echo "<td>".$value['id']."</td>";
                                   echo "<td>".ucwords(strtolower($value['nome']))."</td>";
                                   $cargo = ($value['cargo'] == 1) ? "Administrador" : "Funcionário";
                                   echo "<td>$cargo</td>";
