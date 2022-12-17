@@ -65,7 +65,7 @@ if(empty($_SESSION['nome'])) {
           								{
           									echo "<tr style='text-align: center; font-family: Arial'>";
           									echo "<td><input type='checkbox' name=".$key." value=".$value['id']."></td>";
-          									echo "<td>$key</td>";
+          									echo "<td>".$value['id']."</td>";
           									echo "<td>".ucwords(strtolower($value['nome']))."</td>";
           									$cargo = ($value['cargo'] == 1) ? "Administrador" : "Funcionário";
           								 	echo "<td>$cargo</td>";
