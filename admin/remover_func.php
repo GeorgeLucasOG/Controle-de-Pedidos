@@ -1,9 +1,8 @@
 <?php
 session_start();
-if(empty($_SESSION['nome'])) {
-  echo "<script language=javascript>alert( 'Acesso Bloqueado!' );</script>";
-    echo "<script language=javascript>window.location.replace('../index.html');</script>";
-}
+//Verifica se o usuário está logado no sistema
+if (!isset($_SESSION["nome"]) && !isset($_SESSION["cargo"])) {
+    header("Location: ../index.html");
 ?>
 <!doctype html>
 <html lang="pt-br" >
