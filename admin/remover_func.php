@@ -1,8 +1,9 @@
 <?php
 session_start();
-//Verifica se o usuário está logado no sistema
-if (!isset($_SESSION["nome"]) && !isset($_SESSION["cargo"])) {
-    header("Location: ../index.html");
+if(empty($_SESSION['nome'])) {
+  echo "<script language=javascript>alert( 'Acesso Bloqueado!' );</script>";
+    echo "<script language=javascript>window.location.replace('../index.html');</script>";
+}
 ?>
 <!doctype html>
 <html lang="pt-br" >
@@ -14,34 +15,6 @@ if (!isset($_SESSION["nome"]) && !isset($_SESSION["cargo"])) {
     <link rel="stylesheet" href="../css/foundation.css">
     <link rel="stylesheet" href="../css/painel.css">
     <link rel="stylesheet" href="../css/form.css">
-    
-    <script type="text/javascript">
-      function radio(id, nome, cpf, email, telefone, num, rua, bairro) {
-
-        var user = id;
-        var name = nome;
-        var cpf = cpf;
-        var email = email;
-        var tel = telefone;
-        var num = num;
-        var rua = rua;
-        var bairro = bairro;        
-
-        var newname = name.replace(/#/g, " ");
-        var newbairro = bairro.replace(/#/g, " ");
-        var newrua = rua.replace(/#/g, " ");   
-        
-        document.getElementById("iduser").value = user;
-        document.getElementById("nomeuser").value = newname;
-        document.getElementById("cpfuser").value = cpf;
-        document.getElementById("emailuser").value = email;
-        document.getElementById("teluser").value = telefone;
-        document.getElementById("numuser").value = num;
-        document.getElementById("ruauser").value = newrua;
-        document.getElementById("bairrouser").value = newbairro;
-
-      }
-    </script>
   </head>
   <body class="page-painel">
     <div class="grid-container">
@@ -118,7 +91,7 @@ if (!isset($_SESSION["nome"]) && !isset($_SESSION["cargo"])) {
 
     </div>
 
-	<script src="../js/mascara.js"></script>
+
     <script src="../js/vendor/jquery.js"></script>
     <script src="../js/vendor/what-input.js"></script>
     <script src="../js/vendor/foundation.js"></script>
