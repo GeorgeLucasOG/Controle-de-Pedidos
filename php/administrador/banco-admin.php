@@ -1,6 +1,6 @@
 <?php
 
-include '../banco-acesso.php';
+@include '../banco-acesso.php';
 
 /*
 	Funções relativas a acesso ao banco de dados pelo painel na seção do adminstrador.
