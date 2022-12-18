@@ -45,7 +45,7 @@
 			$ver = 0;										# Variavel de verificação
 			for ($i=0; $i < $quant; $i++) { 
 				for ($a=0; $a < $c; $a++) { 
-					if($users[$i] == $admin[0]['id'])	    # Verifica se o admin encontrado está selecionado para exclusão
+					if(empty($users[$i]) == $admin[0]['id'])# Verifica se não está vazio e se o admin encontrado está selecionado para exclusão
 					{
 						$ver++;
 					}
