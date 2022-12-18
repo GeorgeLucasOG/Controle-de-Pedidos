@@ -1,6 +1,6 @@
 <?php
 
-include '../banco-acesso.php';
+@include '../banco-acesso.php';
 
 function cadastro_cliente($dados) 				# Cadastro do cliente
 {
