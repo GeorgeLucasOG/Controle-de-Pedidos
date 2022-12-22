@@ -27,9 +27,9 @@
  
       
       for($i=0; $i < $quant; $i++)          # Captura os id passados pelo formulario
-        if($_POST[$i])                      # e adiciona-os ao vetor
+        if(isset($_POST[$i])){              # e adiciona-os ao vetor
             $users[] = $_POST[$i];   
-
+        }
 
       foreach ($users as $value){
           remover_ingrediente($value);
