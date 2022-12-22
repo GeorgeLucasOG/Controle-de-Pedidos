@@ -27,7 +27,7 @@
  
       
       for($i=0; $i < $quant; $i++)          # Captura os id passados pelo formulario
-        if($_POST[$i])                      # e adiciona-os ao vetor
+        if(isset($_POST[$i]))        # e adiciona-os ao vetor. Comentário adicionado por George Lucas O. Gonçalves, em 22/12/22 às 10:01 para registrar adição do 'if' e função isset para eliminar o erro "notice Uninitialized string offset" que se apresentava nessa linha.
             $users[] = $_POST[$i];   
 
 
