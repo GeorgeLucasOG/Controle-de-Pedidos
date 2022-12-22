@@ -48,9 +48,17 @@ if(empty($_SESSION['nome'])) {
                   <a href="../painel.php" class="alert button" id="btn-voltar" >VOLTAR</a>
                   <h2 class="form-cad">Cadastro de Produto</h2>
                     <form method="post" action="../php/stock/cadastro_produto_submit.php" class="form-cad">
-                     <p>Nome: <input type="text" name="nome" maxlength="30"></p>
+                    <p>Nome: <input type="text" name="nome" maxlength="30"></p>
                      <p>Preço: R$ <input type="number" name="preco" min="0"> </p>
-                     <p> Ingredientes: </p>
+                     <p>quantidade: <input type="number" name="qtd" min="0"> </p>
+                     <label for="medida"> Medida de quantidade: </label>
+                     <select name="medida" id="medida">
+                        <option value="1">Unidades</option>
+                        <option value="2">Kilos</option>
+                        <option value="3">Gramas</option>
+                        <option value="4">Litros</option>
+                        <option value="5">Mililitros</option>
+                     </select>
                      <fieldset>
                      </fieldset>
                      <input type="submit" name="btn" class="button" id="btn-cad" value="Cadastrar">
