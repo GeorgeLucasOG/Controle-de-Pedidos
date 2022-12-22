@@ -47,7 +47,7 @@ if(empty($_SESSION['nome'])) {
                 <div class="cell small-12 medium-7 large-7">
                   <a href="../painel.php" class="alert button" id="btn-voltar" >VOLTAR</a>
                   <h2 class="form-cad">Cadastro de Produto</h2>
-                    <form method="post" action="../php/stock/cadastrar_produto_submit.php" class="form-cad">
+                    <form method="post" action="../php/stock/cadastro_produto_submit.php" class="form-cad">
                      <p>Nome: <input type="text" name="nome" maxlength="30"></p>
                      <p>Preço: R$ <input type="number" name="preco" min="0"> </p>
                      <p> Ingredientes: </p>
